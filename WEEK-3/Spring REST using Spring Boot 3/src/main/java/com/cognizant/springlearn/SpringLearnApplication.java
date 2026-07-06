@@ -7,6 +7,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 @SpringBootApplication
 public class SpringLearnApplication {
 
@@ -16,8 +20,10 @@ public class SpringLearnApplication {
 
         displayDate();
     }
+    private static final Logger LOGGER = LoggerFactory.getLogger(SpringLearnApplication.class);
 
     public static void displayDate() {
+        LOGGER.info("START");
 
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("date-format.xml");
@@ -32,7 +38,9 @@ public class SpringLearnApplication {
             System.out.println(date);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.error("Error while parsing the date.");
         }
+        LOGGER.info("END");
+
     }
 }
