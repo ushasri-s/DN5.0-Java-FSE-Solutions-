@@ -5,4 +5,6 @@
 
 ## Hands On 2
 - Spring Core – Load SimpleDateFormat from Spring Configuration XML ✅
-Step 5
+
+## Hands On 3 ✅
+- Spring Core – Incorporate Logging
