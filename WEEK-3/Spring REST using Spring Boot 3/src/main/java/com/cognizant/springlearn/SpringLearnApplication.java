@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import java.util.List;
 
 @SpringBootApplication
 public class SpringLearnApplication {
@@ -20,6 +20,7 @@ public class SpringLearnApplication {
 
         displayDate();
         displayCountry();
+        displayCountries();
     }
     private static final Logger LOGGER = LoggerFactory.getLogger(SpringLearnApplication.class);
 
@@ -53,8 +54,25 @@ public class SpringLearnApplication {
 
         Country country =
                 context.getBean("country",Country.class);
+//hands on 5
+        Country anotherCountry =
+                context.getBean("country", Country.class);
 
         LOGGER.debug("Country : {}",country);
         LOGGER.info("END");
+    }
+//HANDS ON 6
+    public static void displayCountries() {
+        LOGGER.info("START-LOG");
+
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("country.xml");
+
+        List<Country> countryList =
+                context.getBean("countryList", List.class);
+
+        LOGGER.debug("Countries : {}", countryList);
+
+        LOGGER.info("END-LOG");
     }
 }
