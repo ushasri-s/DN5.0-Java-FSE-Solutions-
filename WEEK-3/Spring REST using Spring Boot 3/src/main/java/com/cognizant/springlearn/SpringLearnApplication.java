@@ -19,6 +19,7 @@ public class SpringLearnApplication {
         SpringApplication.run(SpringLearnApplication.class, args);
 
         displayDate();
+        displayCountry();
     }
     private static final Logger LOGGER = LoggerFactory.getLogger(SpringLearnApplication.class);
 
@@ -42,5 +43,18 @@ public class SpringLearnApplication {
         }
         LOGGER.info("END");
 
+    }
+//HANDS-ON:4(MANDATORY)
+    public static void displayCountry() {
+        LOGGER.info("START LOG");
+
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("country.xml");
+
+        Country country =
+                context.getBean("country",Country.class);
+
+        LOGGER.debug("Country : {}",country);
+        LOGGER.info("END");
     }
 }
