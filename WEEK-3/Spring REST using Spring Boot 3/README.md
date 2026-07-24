@@ -1,7 +1,7 @@
 
 # Spring REST using Spring Boot 3
 
-## Hands On 1
+## Hands On 1 MANDATORY
 - Create a Spring Web Project using Maven ✅
 
 ## Hands On 2
@@ -19,6 +19,7 @@
 ## Hands On 6
 - Spring Core – Load list of countries from Spring Configuration XML ✅
 
+## MANDATORY
 - Hello World RESTful Web Service✅
 
 - REST - Country Web Service✅
