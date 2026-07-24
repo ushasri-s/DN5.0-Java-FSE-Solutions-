@@ -19,3 +19,10 @@
 ## Hands On 6
 - Spring Core – Load list of countries from Spring Configuration XML ✅
 
+- Hello World RESTful Web Service✅
+
+- REST - Country Web Service✅
+
+- REST - Get country based on country code✅
+
+- Create authentication service that returns JWT✅
