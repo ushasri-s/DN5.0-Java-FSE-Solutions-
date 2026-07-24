@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+}
+
+.column {
+    width: 30%;
+    padding: 20px;
+    border-left: 4px solid green;
+}
